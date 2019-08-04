@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextCheckBox">
+        <!-- TextColor is reversal colors -->
+        <attr name="defaultColor" format="color"/>
+        <attr name="checkedColor" format="color"/>
+
+
+    </declare-styleable>
+</resources>
