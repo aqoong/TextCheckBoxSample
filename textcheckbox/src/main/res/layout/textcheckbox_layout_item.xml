@@ -5,17 +5,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <CheckBox
+        android:button="@null"
         android:id="@+id/textcheckbox_checkbox"
-        android:visibility="invisible"
+        android:background="@drawable/textcheckbox_check_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <android.support.v7.widget.AppCompatTextView
         android:gravity="center"
         android:id="@+id/textcheckbox_text"
-        android:background="@drawable/textcheckbox_check_background"
         app:autoSizeTextType="uniform"
+        android:layout_margin="10dp"
         android:text="dfd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/textcheckbox_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
