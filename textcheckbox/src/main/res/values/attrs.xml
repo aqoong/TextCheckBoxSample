@@ -8,6 +8,8 @@
             <enum name="text" value="0"/>
             <enum name="image" value="1"/>
         </attr>
-
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="src" format="reference"/>
+        <attr name="text" format="string"/>
     </declare-styleable>
 </resources>

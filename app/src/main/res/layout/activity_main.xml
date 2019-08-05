@@ -3,11 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
     <com.aqoong.lib.textcheckbox.TextCheckBox
-        android:layout_width="50dp"
-        android:layout_height="50dp">
+        android:id="@+id/test"
+        app:mode="image"
+        app:strokeWidth="2dp"
+        app:checkedColor="@color/colorPrimary"
+        app:defaultColor="@color/colorPrimaryDark"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
 
     </com.aqoong.lib.textcheckbox.TextCheckBox>
 
