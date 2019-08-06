@@ -190,17 +190,26 @@ public class TextCheckBox extends RelativeLayout {
         return px;
     }
 
-    public void setCheck(boolean check){
+    public boolean setCheck(boolean check){
         vCheckbox.setChecked(check);
+        return check;
     }
 
     public void setCheck(boolean check, Object image){
-        setImage(image);
-        setCheck(check);
+        if(setCheck(check)){
+            setImage(image);
+            vImage.setVisibility(VISIBLE);
+        }else{
+            vImage.setVisibility(INVISIBLE);
+        }
     }
     public void setCheck(boolean check, String text){
-        setText(text);
-        setCheck(check);
+        if(setCheck(check)) {
+            setText(text);
+            vText.setVisibility(VISIBLE);
+        }else{
+            vText.setVisibility(INVISIBLE);
+        }
     }
 
     public void setOnCheckedListener(OnCheckedListener listener){

@@ -14,11 +14,12 @@
 
         <com.aqoong.lib.textcheckbox.TextCheckBox
             android:id="@+id/test"
-            app:strokeWidth="2dp"
+            app:strokeWidth="1dp"
+            app:text="1"
             app:checkedColor="@color/colorPrimary"
             app:defaultColor="@color/colorPrimaryDark"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
+            android:layout_width="30dp"
+            android:layout_height="30dp">
 
         </com.aqoong.lib.textcheckbox.TextCheckBox>
 
