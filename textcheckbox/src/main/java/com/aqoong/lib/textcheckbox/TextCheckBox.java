@@ -54,6 +54,8 @@ public class TextCheckBox extends RelativeLayout {
     private AppCompatTextView   vText;
     private CheckBox            vCheckbox;
 
+    private OnCheckedListener   checkedListener;
+
 
 
     public TextCheckBox(Context context) {
@@ -97,6 +99,7 @@ public class TextCheckBox extends RelativeLayout {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 vText.setTextColor(isChecked ? mDefColor : mCheckColor);
+                checkedListener.OnChecked(isChecked);
             }
         });
 
@@ -144,15 +147,16 @@ public class TextCheckBox extends RelativeLayout {
      * @param image
      */
     public void setImage(Object image){
-        if(image instanceof Bitmap) {
+
+        if (image instanceof Bitmap) {
             vImage.setImageBitmap((Bitmap) image);
-        }else if(image instanceof Drawable){
-            vImage.setImageDrawable((Drawable)image);
-        }else if(image instanceof Integer){
-            vImage.setImageResource((int)image);
-        }else if(image instanceof Uri){
-            vImage.setImageURI((Uri)image);
-        }else{
+        } else if (image instanceof Drawable) {
+            vImage.setImageDrawable((Drawable) image);
+        } else if (image instanceof Integer) {
+            vImage.setImageResource((int) image);
+        } else if (image instanceof Uri) {
+            vImage.setImageURI((Uri) image);
+        } else {
 
             Log.e("TextCheckBox", "Image setting error. check image type.");
         }
@@ -182,6 +186,23 @@ public class TextCheckBox extends RelativeLayout {
     private int dpToPx(Context context, float dp){
         int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
         return px;
+    }
+
+    public void setCheck(boolean check){
+        vCheckbox.setChecked(check);
+    }
+
+    public void setCheck(boolean check, Object image){
+        setImage(image);
+        setCheck(check);
+    }
+    public void setCheck(boolean check, String text){
+        setText(text);
+        setCheck(check);
+    }
+
+    public void setOnCheckedListener(OnCheckedListener listener){
+        this.checkedListener    = listener;
     }
 }
 

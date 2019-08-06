@@ -6,15 +6,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <com.aqoong.lib.textcheckbox.TextCheckBox
-        android:id="@+id/test"
-        app:mode="image"
-        app:strokeWidth="2dp"
-        app:checkedColor="@color/colorPrimary"
-        app:defaultColor="@color/colorPrimaryDark"
-        android:layout_width="100dp"
-        android:layout_height="100dp">
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    </com.aqoong.lib.textcheckbox.TextCheckBox>
+        <com.aqoong.lib.textcheckbox.TextCheckBox
+            android:id="@+id/test"
+            app:strokeWidth="2dp"
+            app:checkedColor="@color/colorPrimary"
+            app:defaultColor="@color/colorPrimaryDark"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
 
+        </com.aqoong.lib.textcheckbox.TextCheckBox>
+
+        <TextView
+            android:textSize="30sp"
+            android:text="ㅇㄹㅁㅇㄹㄴㄹㅇㄴㅁㄹㅇㄴㅁㄹㅇㄴㄹㅇㄴㄹㅇㄹㅁㅇㄴ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 </LinearLayout>
