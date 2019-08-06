@@ -99,7 +99,9 @@ public class TextCheckBox extends RelativeLayout {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 vText.setTextColor(isChecked ? mDefColor : mCheckColor);
-                checkedListener.OnChecked(isChecked);
+                if(checkedListener != null) {
+                    checkedListener.OnChecked(isChecked);
+                }
             }
         });
 
