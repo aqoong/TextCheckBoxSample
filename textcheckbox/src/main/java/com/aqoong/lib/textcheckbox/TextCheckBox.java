@@ -66,7 +66,7 @@ public class TextCheckBox extends RelativeLayout {
         try{
             mDefColor   = ta.getColor(R.styleable.TextCheckBox_defaultColor, ContextCompat.getColor(getContext(), R.color.textcheckbox_default_color));
             mCheckColor = ta.getColor(R.styleable.TextCheckBox_checkedColor, ContextCompat.getColor(getContext(), R.color.textcheckbox_checked_color));
-            mMode       = ta.getInt(R.styleable.TextCheckBox_mode, 0);
+            mMode       = ta.getInt(R.styleable.TextCheckBox_checkMode, 0);
             mStrokeWidth= ta.getDimensionPixelSize(R.styleable.TextCheckBox_strokeWidth, dpToPx(getContext(), 1));
             mImageRes   = ta.getResourceId(R.styleable.TextCheckBox_src, R.drawable.ic_check);
             mText       = ta.getString(R.styleable.TextCheckBox_text);
